@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(image/neom-ihIKOg_lHgI-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    /* background-position: center; */
+}
+
+form {
+    border-radius: 10px;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.187);
+    text-align: left;
+    padding: 20px;
+    color: aliceblue;
+}
+
+.container h1 {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 95%;
+    background-color: rgba(0, 0, 0, 0.232);
+    padding: 7px 10px;
+    border: none;
+    border-radius: 7px;
+}
+
+button {
+    width: 95%;
+    background-color: rgba(15, 128, 165, 0.232);
+    padding: 7px 10px;
+    color: aliceblue;
+    border: none;
+    border-radius: 7px;
+}
