@@ -9,13 +9,21 @@
     <body>
 
         <div class="container">
-            <form action="#">
+            <form class="form" action="#">
                 <h1>Welcome</h1>
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email"><br><br>
-                <label for="password">Password</label>
-                <input type="text" id="password" name="password"><br><br>
-                <button type="submit">Login</button>
+                <div class="input-box">
+                    <div class="input-container success">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email">
+                        <span class="msg"> Valid Email! </span>
+                    </div>
+                    <div class="input-container error">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                        <span class="msg"> Incorrect Password! </span>
+                    </div>
+                    <button type="submit">Login</button>
+                </div>
             </form>
         </div>
     </body>

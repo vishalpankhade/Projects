@@ -4,10 +4,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-light-hsl: 200, 100%, 91%;
+    --primary-hsl: 200, 100%, 50%;
+    --success-hsl: 100, 60%, 50%;
+    --error-hsl: 0, 60%, 50%;
+}
+
 body {
     height: 100vh;
     width: 100%;
-
 }
 
 .container {
@@ -19,41 +25,89 @@ body {
     background-image: url(image/neom-ihIKOg_lHgI-unsplash.jpg);
     background-size: cover;
     background-position: center;
-    /* background-position: center; */
 }
 
 form {
     border-radius: 10px;
     width: 40%;
-    background-color: rgba(0, 0, 0, 0.187);
-    text-align: left;
+    background-color: (hsla(201, 100%, 6%, 0.635));
+    box-shadow: 0px 2px 10px 0px hsla(201, 100%, 6%, 0.635);
+    color: white;
     padding: 20px;
-    color: aliceblue;
 }
 
 .container h1 {
     text-align: center;
-    padding: 10px;
     margin-bottom: 20px;
 }
 
-label {
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 98%;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.input-container input {
+    background-color: hsl(var(--primary-light-hsl), .3);
+    padding: 10px 17px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    color: white;
+    font-size: 1rem;
+}
+
+.input-container.success input {
+    box-shadow: 0 0 0 1px hsl(var(--success-hsl));
+}
+
+.input-container.error input {
+    box-shadow: 0 0 0 1px hsl(var(--error-hsl));
+}
+
+.input-container input:focus {
+    box-shadow: 0 0 0 1px hsl(var(--primary-hsl));
+}
+
+.input-container .msg {
+    display: none;
+    font-size: .75rem;
+}
+
+.input-container.success .msg,
+.input-container.error .msg {
     display: block;
 }
 
-input {
-    width: 95%;
-    background-color: rgba(0, 0, 0, 0.232);
-    padding: 7px 10px;
-    border: none;
-    border-radius: 7px;
+.input-container.success .msg {
+    color: hsl(var(--success-hsl));
+}
+
+.input-container.error .msg {
+    color: hsl(var(--error-hsl));
 }
 
 button {
-    width: 95%;
-    background-color: rgba(15, 128, 165, 0.232);
-    padding: 7px 10px;
-    color: aliceblue;
-    border: none;
-    border-radius: 7px;
+    outline: none;
+    background-color: hsl(var(--primary-hsl), .25);
+    padding: .5rem 1em;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    border: 1px solid hsl(var(--primary-hsl));
+    border-radius: .25em;
+    /* margin-top: 9px; */
+}
+
+button:focus,
+button:hover {
+    background-color: hsl(var(--primary-hsl), .5);
+
 }
