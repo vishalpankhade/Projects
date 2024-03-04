@@ -684,23 +684,6 @@ nav a button {
     }
 }
 
-@media screen and (max-width: 13000px) {
-    .hero-box {
-        height: auto;
-    }
-}
-
-
-/* @media screen and (max-width: 845px) {
-    .hero {
-        gap: 10px;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-} */
-
-
 @media screen and (min-width: 845px) {
 
     .hero> :nth-child(1) {
@@ -750,11 +733,17 @@ nav a button {
 
     .email {
         flex-direction: row;
-        align-items: center;
+        align-items: start;
         justify-content: start;
     }
 
     .email2 .email>input {
         width: 60%;
+    }
+}
+
+@media screen and (max-width: 13000px) {
+    .hero-box {
+        height: auto;
     }
 }
